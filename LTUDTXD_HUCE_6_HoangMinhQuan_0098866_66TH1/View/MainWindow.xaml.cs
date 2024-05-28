@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,21 +24,14 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }
-
-        private void btn_DangNhap_click(object sender, RoutedEventArgs e)
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            HomeWindow form_Home = new HomeWindow();
-            form_Home.Show();   
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-            this.Hide();
-            test2 form_Home = new test2();
-            form_Home.Show();
+            if (DataContext is LoginViewModel viewModel)
+            {
+                viewModel.Password = ((PasswordBox)sender).Password;
+            }
         }
     }
 }

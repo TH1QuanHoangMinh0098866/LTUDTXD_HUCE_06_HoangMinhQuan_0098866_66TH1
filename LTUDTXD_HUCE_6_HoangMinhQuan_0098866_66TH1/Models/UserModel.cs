@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.OOP
+namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.Models
 {
-    internal class NhanVienClass
+    internal class UserModel
     {
     }
 }

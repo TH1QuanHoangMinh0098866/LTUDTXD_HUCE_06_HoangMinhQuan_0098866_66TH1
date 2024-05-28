@@ -10,21 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1
+namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages
 {
     /// <summary>
-    /// Interaction logic for test2.xaml
+    /// Interaction logic for hometest.xaml
     /// </summary>
-    public partial class test2 : Window
+    public partial class hometest : Page
     {
-        public test2()
+        public hometest()
         {
             InitializeComponent();
-            mainMenu.MouseEnter += (s, e) => mainMenu.IsExpanded = true;
-            mainMenu.MouseLeave += (s, e) => mainMenu.IsExpanded = false;
         }
-        
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
     }
 }
