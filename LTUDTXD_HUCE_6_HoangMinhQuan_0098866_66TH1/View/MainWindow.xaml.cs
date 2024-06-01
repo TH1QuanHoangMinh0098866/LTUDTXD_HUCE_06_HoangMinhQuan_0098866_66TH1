@@ -25,13 +25,27 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1
         {
             InitializeComponent();
             this.DataContext = new LoginViewModel();
+            
+
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (DataContext is LoginViewModel viewModel)
+            if (DataContext is LoginViewModel viewModel && sender is PasswordBox passwordBox)
             {
-                viewModel.Password = ((PasswordBox)sender).Password;
+                string password = passwordBox.Password;
+                viewModel.Password = password;
             }
         }
+
+
+        private void txt_DangNhap_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string username = txt_DangNhap.Text;
+            if (DataContext is LoginViewModel viewModel)
+            {
+                viewModel.Username = username;
+            }
+        }
+
     }
 }

@@ -9,6 +9,54 @@
       Title="CongTrinhPage">
 
     <Grid>
-        
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label FontSize="30" Margin="20 0 0 0" Content="Thông Tin Công Trình"></Label>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Button>
+                    <Image Source="\Resources\icons\Edit.ico" Width="20"/>
+                </Button>
+                <Button >
+                    <Image Source="\Resources\icons\Delete.ico" Width="20"/>
+                </Button>
+                <Button>
+                    <Image Source="\Resources\icons\Plus.ico" Width="20"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+
+            </StackPanel>
+            <DataGrid Background="Transparent" Grid.Row="1" AutoGenerateColumns="False" >
+                <DataGrid.Columns>
+                    <!-- Define your columns here -->
+                    <DataGridTextColumn Header="Mã Công Trình"/>
+                    <DataGridTextColumn Header="Tên Công Trình" />
+                    <DataGridTextColumn Header="Địa Điểm" />
+
+                    <DataGridTemplateColumn Header="Ngày Bắt Đầu">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker BorderThickness="0"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="Ngày Kết Thúc">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker  BorderThickness="0"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Header="Người Quản Lý"/>
+                    <DataGridTextColumn Header="Trạng thái"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Page>

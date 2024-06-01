@@ -9,6 +9,43 @@
       Title="BaoCaoPage">
 
     <Grid>
-        
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label FontSize="30" Margin="20 0 0 0" Content="Lập Báo Cáo"></Label>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Button>
+                    <Image Source="\Resources\icons\Edit.ico" Width="20"/>
+                </Button>
+                <Button >
+                    <Image Source="\Resources\icons\Delete.ico" Width="20"/>
+                </Button>
+                <Button>
+                    <Image Source="\Resources\icons\Plus.ico" Width="20"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+
+            </StackPanel>
+            <DataGrid Background="Transparent" Grid.Row="1" AutoGenerateColumns="False" >
+                <DataGrid.Columns>
+                    <!-- Define your columns here -->
+                    <DataGridTextColumn Header="Mã Báo Cáo"/>
+                    <DataGridTextColumn Header="Loại báo cáo" />
+                    <DataGridTextColumn Header="Người tạo" />
+                    <DataGridTemplateColumn Header="Ngày Tạo">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker BorderThickness="0"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Tiêu đề" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Page>

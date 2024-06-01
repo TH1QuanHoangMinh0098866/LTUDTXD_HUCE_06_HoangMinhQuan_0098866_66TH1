@@ -9,6 +9,44 @@
       Title="XuatKhoPage">
 
     <Grid>
-        
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label FontSize="30" Margin="20 0 0 0" Content="Phiếu Xuất kho"></Label>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Button>
+                    <Image Source="\Resources\icons\Edit.ico" Width="20"/>
+                </Button>
+                <Button >
+                    <Image Source="\Resources\icons\Delete.ico" Width="20"/>
+                </Button>
+                <Button>
+                    <Image Source="\Resources\icons\Plus.ico" Width="20"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+
+            </StackPanel>
+            <DataGrid Background="Transparent" Grid.Row="1" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="Mã Phiếu xuất"/>
+                    <DataGridTextColumn Header="Người Xuất" />
+                    <DataGridTextColumn Header="Người nhận" />
+
+                    <DataGridTemplateColumn Header="Ngày Xuất">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate >
+                                <DatePicker BorderThickness="0"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Danh sach vat tư Xuất" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Page>

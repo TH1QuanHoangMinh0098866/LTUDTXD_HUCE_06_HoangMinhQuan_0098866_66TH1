@@ -1,9 +1,12 @@
-﻿using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages;
+﻿using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View;
+using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages;
+using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -26,9 +29,14 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1
             mainMenu.MouseEnter += (s, e) => mainMenu.IsExpanded = true;
             mainMenu.MouseLeave += (s, e) => mainMenu.IsExpanded = false;
             frame_Body.Content = new HomePage();
+            DataContext = new HomeViewModel();
+
         }
 
-        private void Button_DpiChanged(object sender, DpiChangedEventArgs e)
+
+       
+
+        private void Button_DpiChanged(object senderF, DpiChangedEventArgs e)
         {
 
         }

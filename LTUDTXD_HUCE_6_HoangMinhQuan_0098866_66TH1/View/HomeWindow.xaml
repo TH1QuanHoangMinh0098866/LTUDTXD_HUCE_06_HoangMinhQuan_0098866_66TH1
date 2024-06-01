@@ -9,28 +9,25 @@
         mc:Ignorable="d"
               Title="Phần mềm quản lý vật tư công trường" Height="600" Width="1000">
 
-
     <Grid>
-
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="13"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="457*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="13*"/>
-            <RowDefinition Height="494*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="510*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="#f5f5f5"/>
+        <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Fill="White"/>
 
-        <Frame  x:Name="frame_Body" Grid.Row="2" Grid.Column="2" Background="LightGray" />
+        <Frame  x:Name="frame_Body" Grid.Row="2" Grid.Column="2" Background="LightGray" Grid.RowSpan="2" />
         <!-- menu-->
         <DockPanel Margin="-212,-88,532,12" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <Expander Panel.ZIndex="1000" x:Name="mainMenu" ExpandDirection="Right" IsExpanded="False" Width="228" Background="{x:Null}" BorderBrush="gray">
                 <Expander.Header>
-
 
                     <StackPanel Orientation="Vertical" Background="Transparent" Grid.Row="1" Width="30">
 
@@ -106,8 +103,6 @@
             </Expander>
 
         </DockPanel>
-
-        <!-- toolbar-->
         <materialDesign:DrawerHost
           x:Name="DrawerHost"
           Width="1000"
@@ -117,7 +112,7 @@
           BorderBrush="{DynamicResource MaterialDesignDivider}"
           BorderThickness="2"
           BottomDrawerBackground="{DynamicResource SecondaryHueLightBrush}"
-          BottomDrawerCornerRadius="20 20 0 0" Margin="0,-9,0,0" Grid.RowSpan="3" Grid.ColumnSpan="3">
+          BottomDrawerCornerRadius="20 20 0 0" Grid.ColumnSpan="3" Grid.Row="1" Margin="0,-9,0,0" Grid.RowSpan="3">
             <materialDesign:DrawerHost.Style>
                 <Style
               TargetType="materialDesign:DrawerHost"
@@ -134,8 +129,8 @@
                 </Style>
             </materialDesign:DrawerHost.Style>
             <materialDesign:DrawerHost.LeftDrawerContent>
-                
-                
+
+
                 <StackPanel
                Margin="0,0,20,0">
 
@@ -261,21 +256,23 @@
                         </StackPanel>
 
                         <TextBlock Width="238"></TextBlock>
-                        <materialDesign:PackIcon Kind="BellBadge" Width="30" Height="24" Foreground="#FF3A3131" VerticalAlignment="Center" />
+                        <materialDesign:PackIcon Kind="BellBadge" Width="30" Height="24" Foreground="#FF3A3131" VerticalAlignment="Center" >
+
+                        </materialDesign:PackIcon>
                         <TextBlock Width="15"></TextBlock>
 
                         <StackPanel Orientation="Horizontal" >
                             <Image Source="\Resources\Images\avatar1.png" DockPanel.Dock="Right" Width="50"/>
-                            <Button Style="{StaticResource MaterialDesignFlatButton}" >
-                                <TextBox  DockPanel.Dock="Right" Text="Username" FontSize="18" VerticalContentAlignment="Center" Foreground="#FF080000" Height="32" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            </Button>
+                            <ComboBox x:Name="bbb_TaiKhoan" Width="150" Height="32" VerticalAlignment="Center" HorizontalAlignment="Left"
+                  SelectedItem="{Binding SelectedAction}" >
+                                <ComboBoxItem Content="Tên" IsEnabled="False" IsSelected="True"/>
+                                <ComboBoxItem Content="Tài khoản"/>
+                                <ComboBoxItem Content="Đăng xuất"/>
+                            </ComboBox>
                         </StackPanel>
                     </DockPanel>
                 </materialDesign:ColorZone>
             </Grid>
-
-
-
         </materialDesign:DrawerHost>
 
 

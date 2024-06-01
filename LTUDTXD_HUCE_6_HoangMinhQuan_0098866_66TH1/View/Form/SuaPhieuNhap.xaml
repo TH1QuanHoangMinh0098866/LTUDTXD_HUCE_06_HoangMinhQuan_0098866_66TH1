@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Form"
         mc:Ignorable="d"
-        Title="SuaPhieuNhap" Height="450" Width="800">
+              Title="SuaPhieuNhap" Height="400" Width="550">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="Sửa phiếu nhập"      
+          Foreground="Purple"
+          FontSize="30"
+          HorizontalAlignment="Center"
+          Margin="0,10,0,46"/>
+
+        <StackPanel Margin="59,82,91,0" Width="400" VerticalAlignment="Top" Grid.RowSpan="2" Height="349">
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Mã Phiếu Xuất :"></TextBlock>
+                <TextBox  Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Người Nhập:"></TextBlock>
+                <TextBox Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Nhà cung cấp :"></TextBlock>
+                <TextBox  Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+
+
+
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Ngày Nhập :"></TextBlock>
+                <TextBox Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+            <DatePicker  HorizontalAlignment="Right" Width="100" ></DatePicker>
+
+
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Danh sach vật tư nhập :"></TextBlock>
+                <Button  Margin="10 0 0 0" Width="250" Background="{x:Null}"></Button>
+            </StackPanel>
+
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="230 50 0 0">
+            <Button x:Name="btnsua"
+Width="50"
+Height="30"
+Content="Sửa"  ></Button>
+            <Button x:Name="btnThoat" Content="Thoát" 
+Width="50"
+ Height="30"
+Margin="10 0 0 0" 
+></Button>
+        </StackPanel>
+
     </Grid>
 </Window>

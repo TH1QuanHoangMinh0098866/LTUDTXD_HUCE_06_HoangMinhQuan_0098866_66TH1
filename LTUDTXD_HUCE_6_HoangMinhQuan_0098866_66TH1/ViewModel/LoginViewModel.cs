@@ -13,8 +13,9 @@ using System.Windows.Threading;
 using System.Windows;
 using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View;
 using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel;
-using WPF.UI.MVVM.Command;
 using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.Models;
+using WPF.UI.MVVM.Command;
+using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.DAL;
 using System.ComponentModel;
 
 
@@ -50,8 +51,10 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel
 
         public LoginViewModel()
         {
-            LoginCommand = new RelayCommand<object>(ExecuteLogin, CanExecuteLogin);
+            LoginCommand = new RelayCommand<object>(CanExecuteLogin, ExecuteLogin);
+
         }
+
 
         private void ExecuteLogin(object parameter)
         {
@@ -62,7 +65,7 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel
 
             foreach (var account in accounts)
             {
-                if (account.Username == Username && account.Password == MD5Hash(Password))
+                if (account.Username == Username && account.Password == Password)
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
 
