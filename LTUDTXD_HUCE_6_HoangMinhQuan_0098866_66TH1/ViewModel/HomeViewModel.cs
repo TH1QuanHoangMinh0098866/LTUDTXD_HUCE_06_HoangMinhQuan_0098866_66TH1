@@ -21,6 +21,7 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel
                 OnPropertyChanged();
                 PerformAction();
             }
+
         }
 
         private void PerformAction()

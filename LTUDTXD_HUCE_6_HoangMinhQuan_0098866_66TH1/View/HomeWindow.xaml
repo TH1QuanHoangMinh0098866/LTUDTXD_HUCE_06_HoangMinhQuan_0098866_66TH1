@@ -12,8 +12,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="457*"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,8 +22,9 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Fill="White"/>
-
-        <Frame  x:Name="frame_Body" Grid.Row="2" Grid.Column="2" Background="LightGray" Grid.RowSpan="2" />
+        <Border Grid.Row="2" Grid.Column="2" Background="LightGray"></Border>
+        <Frame  Margin="7 7 0 0" x:Name="frame_Body" Grid.Row="2" Grid.Column="2" Background="LightGray" Grid.RowSpan="2" />
+       
         <!-- menu-->
         <DockPanel Margin="-212,-88,532,12" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <Expander Panel.ZIndex="1000" x:Name="mainMenu" ExpandDirection="Right" IsExpanded="False" Width="228" Background="{x:Null}" BorderBrush="gray">
@@ -75,7 +76,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Height="60">
-                        <Button HorizontalContentAlignment="Left" Content="Công trình "   Height="30" Width="140" Style="{StaticResource MaterialDesignFlatButton}"  FontSize="18"/>
+                        <Button x:Name="Btn_Congtrinh" HorizontalContentAlignment="Left" Content="Công trình "   Height="30" Width="140" Style="{StaticResource MaterialDesignFlatButton}"  FontSize="18" Click="Btn_Congtrinh_Click_1"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Height="60">

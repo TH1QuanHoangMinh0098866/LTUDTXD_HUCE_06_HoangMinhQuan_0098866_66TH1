@@ -1,4 +1,4 @@
-﻿// CongTrinh.cs
+﻿
 using System;
 using System.ComponentModel;
 

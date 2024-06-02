@@ -1,0 +1,66 @@
+﻿<Page x:Class="LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages.BaoCaoVatTuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages"
+      mc:Ignorable="d" 
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    d:DesignHeight="750" d:DesignWidth="1110"
+      Title="BaoCaoVTPage">
+
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="3"
+         Grid.Row="0"
+      Orientation="Horizontal"
+         >
+            <ComboBox   
+     Margin="10 10 10 0"
+    SelectedIndex="0"
+    Style="{StaticResource MaterialDesignComboBox}"
+    ItemsSource="{Binding TenCongTrinh}">
+                <Label Style="{StaticResource MaterialDesignLabel}">Công trình 1</Label>
+            </ComboBox>
+            <ComboBox   
+      Margin="10 10 10 0"
+     SelectedIndex="0"
+     Style="{StaticResource MaterialDesignComboBox}"
+     ItemsSource="{Binding ToDoi}">
+                <Label Style="{StaticResource MaterialDesignLabel}">Tổ đội</Label>
+            </ComboBox>
+            <Button 
+     Content="Tìm kiếm"
+     
+     Background="LightGray"
+      Margin="10 10 10 0"
+     Width="200"
+     HorizontalContentAlignment="Center"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" 
+             x:Name="dtg_BaoCaoVT"
+             Style="{StaticResource MaterialDesignDataGrid}"
+             Grid.ColumnSpan="3" Margin="20,0,35,0" RenderTransformOrigin="0.397,0.484">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="STT" Binding="{Binding STT}"/>
+                <DataGridTextColumn Header="Mã Vật tư " Binding="{Binding MaVatTu}"/>
+                <DataGridTextColumn Header="Tên Vật tư " Binding="{Binding TenVatTu}"/>
+                <DataGridTextColumn Header="Loại Vật tư " Binding="{Binding LoaiVatTu}"/>
+                <DataGridTextColumn Header="Số lượng" Binding="{Binding SoLuongVT}" />
+                <DataGridTextColumn Header="Đơn vị" Binding="{Binding DonVi}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

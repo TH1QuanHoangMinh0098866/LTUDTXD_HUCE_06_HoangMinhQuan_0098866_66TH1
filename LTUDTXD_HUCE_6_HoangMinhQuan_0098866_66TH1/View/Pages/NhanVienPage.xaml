@@ -1,0 +1,112 @@
+﻿<Page x:Class="LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages.NhanVienPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages"
+           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+        Title="Phần mềm quản lý công trường" Height="750" Width="1110">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="White" HorizontalAlignment="Center" 
+             Grid.Row="0" 
+             Grid.Column="1"
+             Orientation="Horizontal">
+            <Button  >
+                <Image Source="\Resources\Icons\Plus.ico" Width="30px" />
+            </Button>
+            <Button >
+                <Image Source="\Resources\Icons\Edit.ico" Width="30px" />
+            </Button>
+            <Button >
+                <Image Source="\Resources\Icons\Delete.ico" Width="30px" />
+            </Button>
+        </StackPanel>
+        <Button 
+                HorizontalContentAlignment="Right"
+                Margin="0 0 10 0"
+                Height="30"
+                Background="{x:Null}"
+                BorderBrush="{x:Null}"
+                Foreground="White"
+                Grid.Column="2">
+
+        </Button  >
+        <Image 
+               Source="\Resources\Images\avatar1.png" 
+               Grid.Row="1" Margin="0,0,0,10"/>
+        <StackPanel Margin="20 30 0 0"
+                 Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <Label Content="Tên Nhân Viên :"
+                   Style="{StaticResource MaterialDesignLabel}"/>
+
+            <TextBlock Text="Nguyễn Văn A" 
+                             Grid.Row="1" Width="250"
+                             Height="50"
+                           Background="White"
+
+                             
+                            Style="{StaticResource MaterialDesignBody1TextBlock}"
+                            Binding.SourceUpdated="{Binding TenNV}"/>
+
+
+            <Label Content="Mã Nhân viên :"
+                   Style="{StaticResource MaterialDesignLabel}"/>
+
+
+            <TextBlock Text="12345" Grid.Row="1" Width="250" Height="50"
+                           Style="{StaticResource MaterialDesignBody1TextBlock}"
+                            Binding.SourceUpdated="{Binding MaNV}"/>
+
+        </StackPanel>
+        <StackPanel Margin="20 30 0 0"
+          Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+            <Label Content="Giới tính :"
+                     Style="{StaticResource MaterialDesignLabel}"/>
+
+            <TextBlock Text="Nam" 
+                      Grid.Row="1" Width="250"
+                      Height="50"
+                      Style="{StaticResource MaterialDesignBody1TextBlock}"
+                      Binding.SourceUpdated="{Binding GioiTinh}"/>
+
+
+            <Label Content="Tuổi :"
+                     Style="{StaticResource MaterialDesignLabel}"/>
+
+
+            <TextBlock Text="26" Grid.Row="1" Width="250" Height="50"
+                    Style="{StaticResource MaterialDesignBody2TextBlock}"
+                     Binding.SourceUpdated="{Binding MaNV}"/>
+
+        </StackPanel>
+        <DataGrid Grid.Row="2" 
+                  x:Name="dtg_Nhanvien"
+                  Style="{StaticResource MaterialDesignDataGrid}" Grid.ColumnSpan="3" Margin="0,0,10,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Chức vụ"
+                                    Binding="{Binding ChucVu}" />
+                <DataGridTextColumn Header="Tổ /đội" Binding="{Binding MaToDoi}" />
+                <DataGridTextColumn Header="Lương" Binding="{Binding Luong}" />
+                <DataGridTemplateColumn Header="Ngày Bắt đầu làm ">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding NgayBatDauLamViec}" BorderThickness="0" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Mã Công trình" Binding="{Binding MaCT}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

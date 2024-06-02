@@ -246,6 +246,18 @@
     <Compile Include="View\Form\QuanMKForm.xaml.cs">
       <DependentUpon>QuanMKForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Form\SuaDanhMucNV.xaml.cs">
+      <DependentUpon>SuaDanhMucNV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form\SuaNhanVien.xaml.cs">
+      <DependentUpon>SuaNhanVien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form\ThemDanhMucNV.xaml.cs">
+      <DependentUpon>ThemDanhMucNV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form\ThemNhanVien.xaml.cs">
+      <DependentUpon>ThemNhanVien.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Form\ThemVatLieu.xaml.cs">
       <DependentUpon>ThemVatLieu.xaml</DependentUpon>
     </Compile>
@@ -282,14 +294,32 @@
     <Compile Include="View\Pages\BaoCaoPage.xaml.cs">
       <DependentUpon>BaoCaoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\BaoCaoTienDoPage.xaml.cs">
+      <DependentUpon>BaoCaoTienDoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\BaoCaoVatTuPage.xaml.cs">
+      <DependentUpon>BaoCaoVatTuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\CapNhapCongTacPage.xaml.cs">
+      <DependentUpon>CapNhapCongTacPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\CongTrinhPage.xaml.cs">
       <DependentUpon>CongTrinhPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\LapTIenDoPage.xaml.cs">
+      <DependentUpon>LapTIenDoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\NhanVienPage.xaml.cs">
+      <DependentUpon>NhanVienPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\NhapKhoPage.xaml.cs">
       <DependentUpon>NhapKhoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\NhapVTPage.xaml.cs">
+      <DependentUpon>NhapVTPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\VatLieuPage.xaml.cs">
       <DependentUpon>VatLieuPage.xaml</DependentUpon>
@@ -300,11 +330,30 @@
     <Compile Include="View\ThongTinTaiKhoan.xaml.cs">
       <DependentUpon>ThongTinTaiKhoan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UC_GanttExample.xaml.cs">
+      <DependentUpon>UC_GanttExample.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\Form\DangKyForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Form\QuanMKForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Form\SuaDanhMucNV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Form\SuaNhanVien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Form\ThemDanhMucNV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Form\ThemNhanVien.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -360,6 +409,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\BaoCaoTienDoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\BaoCaoVatTuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\CapNhapCongTacPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\CongTrinhPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -368,7 +429,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\LapTIenDoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\NhanVienPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\NhapKhoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\NhapVTPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -381,6 +454,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ThongTinTaiKhoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UC_GanttExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

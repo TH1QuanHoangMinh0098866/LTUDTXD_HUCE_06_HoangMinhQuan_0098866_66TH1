@@ -107,7 +107,7 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@MaCongTrinh", congTrinh.MaCongTrinh);
                 cmd.ExecuteNonQuery();
-            }
+            } 
             LoadData(); // Load lại dữ liệu sau khi xóa
         }
 
