@@ -153,7 +153,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Height="60">
                         <Image Source="\Resources\Images\CongTrinh.PNG" Width="30px" />
-                        <Button HorizontalContentAlignment="Left" Content="Công trình"  Style="{StaticResource MaterialDesignFlatButton}" Height="30" Width="140" HorizontalAlignment="Left"/>
+                        <Button x:Name="btn_CongTrinh" HorizontalContentAlignment="Left" Content="Công trình"  Style="{StaticResource MaterialDesignFlatButton}" Height="30" Width="140" HorizontalAlignment="Left" Click="btn_CongTrinh_Click"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Height="60" VerticalAlignment="Center">

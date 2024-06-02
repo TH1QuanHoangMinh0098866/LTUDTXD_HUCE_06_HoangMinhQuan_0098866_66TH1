@@ -10,24 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages
+namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Form
 {
     /// <summary>
-    /// Interaction logic for hometest.xaml
+    /// Interaction logic for DangKyForm.xaml
     /// </summary>
-    public partial class hometest : Page
+    public partial class DangKyForm : Window
     {
-        public hometest()
+        public DangKyForm()
         {
             InitializeComponent();
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            
+            //
         }
     }
 }

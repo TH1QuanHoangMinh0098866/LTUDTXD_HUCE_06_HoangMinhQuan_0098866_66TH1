@@ -68,10 +68,10 @@
                              Foreground="White"
                              Background="{x:Null}" BorderBrush="White" Opacity="0.6"/>
             </StackPanel>
-            <Button HorizontalContentAlignment="Right"
+            <Button x:Name="btn_QuenMK" HorizontalContentAlignment="Right"
                     VerticalContentAlignment="Bottom"
                     Content="Quên mật khẩu?"
-                    Foreground="White" Height="60" FontFamily="Arial" Opacity="0.6" Background="{x:Null}" BorderBrush="{x:Null}" FontStyle="Italic" RenderTransformOrigin="0.5,0.5"/>
+                    Foreground="White" Height="60" FontFamily="Arial" Opacity="0.6" Background="{x:Null}" BorderBrush="{x:Null}" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Click="btn_QuenMK_Click"/>
             <Border Background="#FF49084E" CornerRadius="20 20 20 20" Grid.Column="1"  Grid.Row="1" Height="46" Width="278">
                 <Button x:Name="btn_DangNhap" 
                         Command="{Binding LoginCommand}"
@@ -85,7 +85,7 @@
                 <Button x:Name="btn_DangKy"
                         HorizontalContentAlignment="Center"
                         FontWeight="Bold"
-                        Content="Đăng ký" Foreground="White" Background="{x:Null}" HorizontalAlignment="Center" Width="178" VerticalAlignment="Center" BorderBrush="{x:Null}" Height="47"/>
+                        Content="Đăng ký" Foreground="White" Background="{x:Null}" HorizontalAlignment="Center" Width="178" VerticalAlignment="Center" BorderBrush="{x:Null}" Height="47" Click="btn_DangKy_Click"/>
             </Border>
         </StackPanel>
     </Grid>

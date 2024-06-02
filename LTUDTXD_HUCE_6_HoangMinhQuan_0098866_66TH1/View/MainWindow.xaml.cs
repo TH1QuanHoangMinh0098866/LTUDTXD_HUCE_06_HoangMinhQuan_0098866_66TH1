@@ -1,4 +1,5 @@
-﻿using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel;
+﻿using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Form;
+using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,5 +48,16 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1
             }
         }
 
+        private void btn_DangKy_Click(object sender, RoutedEventArgs e)
+        {
+            DangKyForm Dangkyform = new DangKyForm(); 
+            Dangkyform.ShowDialog(); 
+        }
+
+        private void btn_QuenMK_Click(object sender, RoutedEventArgs e)
+        {
+            QuanMKForm quenmk = new QuanMKForm();
+            quenmk.ShowDialog();
+        }
     }
 }
