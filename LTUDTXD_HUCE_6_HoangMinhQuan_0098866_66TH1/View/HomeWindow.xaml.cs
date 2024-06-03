@@ -55,5 +55,10 @@ namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1
         {
             frame_Body.Content = new CongTrinhPage();
         }
+
+        private void btn_NhanVien_Click(object sender, RoutedEventArgs e)
+        {
+            frame_Body.Content = new NhanVienPage();
+        }
     }
 }

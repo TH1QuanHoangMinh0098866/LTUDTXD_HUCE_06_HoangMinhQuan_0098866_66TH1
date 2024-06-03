@@ -1,5 +1,4 @@
-﻿using LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,22 +16,13 @@ using System.Windows.Shapes;
 namespace LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Pages
 {
     /// <summary>
-    /// Interaction logic for NhanVienPage.xaml
+    /// Interaction logic for ThongTinNhanVienPage.xaml
     /// </summary>
-    public partial class NhanVienPage : Page
+    public partial class ThongTinNhanVienPage : Page
     {
-        private NhanVienViewModel _viewModel;
-
-        public NhanVienPage()
+        public ThongTinNhanVienPage()
         {
             InitializeComponent();
-            _viewModel = new NhanVienViewModel();
-            DataContext = _viewModel;
-        }
-
-        private void btn_themnhanvien_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -7,6 +7,83 @@
         mc:Ignorable="d"
         Title="ThemDanhMucNV" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="Thêm Danh Mục Nhiệm Vụ" 
+        Grid.Column="0" 
+        Grid.ColumnSpan="2"      
+        Foreground="Blue"
+        FontSize="30"
+        FontWeight="Bold"
+        FontFamily="Times New Roman"
+        HorizontalAlignment="Center"
+        Margin="0 10 0 0"></Label>
+
+        <StackPanel Margin="0 90 0 0" Width="400" >
+            <StackPanel  Orientation="Horizontal" >
+                <TextBlock Text="Danh mục thực hiện :"
+                         FontFamily="Times New Roman"
+                         Width="140"
+                          FontSize="15"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Bottom"></TextBlock>
+                <TextBox x:Name="txt_DanhMuc" Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Tên Tổ đội:"
+                         Width="140"
+         FontFamily="Times New Roman"
+          FontSize="15"
+           HorizontalAlignment="Left"
+          VerticalAlignment="Bottom"></TextBlock>
+                <TextBox x:Name="txt_TenToDoi" Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+
+
+
+
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <TextBlock Text="Ngày giao nhiệm Vụ :"
+         FontFamily="Times New Roman"
+         FontSize="15" Width="140"
+          HorizontalAlignment="Left"
+         VerticalAlignment="Bottom"></TextBlock>
+                <TextBox x:Name="txt_BatDau" Margin="10 0 0 0" Width="250"></TextBox>
+            </StackPanel>
+            <DatePicker x:Name="dtp_NgayBatdau" HorizontalAlignment="Right" Width="100"  ></DatePicker>
+
+
+
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="50 0 0 0">
+            <Button x:Name="btnSua"
+                    BorderBrush="{x:Null}"
+                             FontFamily="Times New Roman"
+           Foreground="Black" 
+                  Background="LightGray"
+         FontSize="15"
+            Width="100"
+            Height="30"
+            Content="Lưu"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+  
+           ToolTip="MaterialDesignFlatLightButton" ></Button>
+            <Button x:Name="btnThoat" Content="Thoát" 
+               Foreground="Black" 
+                  Background="LightGray"
+                  FontFamily="Times New Roman"
+         FontSize="15"  
+                  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+BorderBrush="{x:Null}"
+ToolTip="MaterialDesignFlatLightButton" 
+                  Width="100"
+        Height="30"
+       Margin="10 0 0 0" 
+       ></Button>
+        </StackPanel>
     </Grid>
 </Window>

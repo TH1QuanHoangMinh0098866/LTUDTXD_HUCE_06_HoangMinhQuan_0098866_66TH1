@@ -5,8 +5,158 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LTUDTXD_HUCE_6_HoangMinhQuan_0098866_66TH1.View.Form"
         mc:Ignorable="d"
-        Title="ThamVatLieu" Height="450" Width="800">
+        Title="ThemVatTuNhap" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Thêm Vật Tư Nhập " 
+          Grid.Column="0" 
+          Grid.ColumnSpan="2"      
+          Foreground="Blue"
+          FontSize="30"
+          FontWeight="Bold"
+          FontFamily="Times New Roman"
+          HorizontalAlignment="Center"
+          Margin="0 10 0 0"></Label>
+
+
+        <StackPanel  Margin="0 70 0 0"
+                         >
+            <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBlock Text="Tên Vật tư :"
+                           FontFamily="Times New Roman"
+                           Width="100"
+                            FontSize="15"
+                           />
+                <TextBox x:Name="txt_TenVatTu" Margin="10 0 0 0" Width="100"/>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Mã vật tư :"
+                           Width="100"
+           FontFamily="Times New Roman"
+            FontSize="15"
+             HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"></TextBlock>
+                <TextBox x:Name="txt_MaVatTu" Margin="10 0 0 0" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Loại vật tư :"
+                 Width="100"
+ FontFamily="Times New Roman"
+  FontSize="15"
+   HorizontalAlignment="Left"
+  VerticalAlignment="Bottom"></TextBlock>
+                <TextBox  Margin="10 0 0 0" Width="100" x:Name="txt_LoaiVatTu"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Tên công trình:"
+           FontFamily="Times New Roman"
+           FontSize="15" Width="100"
+            HorizontalAlignment="Left"
+           VerticalAlignment="Bottom"></TextBlock>
+                <TextBox  Margin="10 0 0 0" Width="100" x:Name="txt_TenCongTrinh"></TextBox>
+            </StackPanel>
+
+
+
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Ngày nhập  :"
+           FontFamily="Times New Roman"
+           FontSize="15" Width="100"
+            HorizontalAlignment="Left"
+           VerticalAlignment="Bottom"></TextBlock>
+                <TextBox x:Name="txt_NgayNhap" Margin="10 0 0 0" Width="100"></TextBox>
+            </StackPanel>
+            <DatePicker x:Name="dtp_NgayNhap"  Width="40" Margin="40 0 0 0" 
+                        >
+
+            </DatePicker>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0 70 0 0">
+
+            <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBlock Text="Mã kho :"
+                          FontFamily="Times New Roman"
+                          Width="100"
+                           FontSize="15"
+                          />
+                <TextBox Margin="10 0 0 0" Width="100" x:Name="txt_MaKho"/>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Số lượng :"
+                          Width="100"
+          FontFamily="Times New Roman"
+           FontSize="15"
+            HorizontalAlignment="Left"
+           VerticalAlignment="Bottom"></TextBlock>
+                <TextBox  Margin="10 0 0 0" Width="100" x:Name="txt_SoLuong"></TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Đơn Vị :"
+ FontFamily="Times New Roman"
+ FontSize="15" Width="100"
+  HorizontalAlignment="Left"
+ VerticalAlignment="Bottom"></TextBlock>
+                <ComboBox  
+    FontFamily="Times New Roman"
+     FontSize="15" SelectedIndex="0"  Margin="10 0 0 0" Width="100" x:Name="cbb_DonVi">
+                    <ComboBoxItem Content="Thanh"/>
+                    <ComboBoxItem Content="m2"/>
+                    <ComboBoxItem Content="m3"/>
+                    <ComboBoxItem Content="kg"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Giá Nhập  (đồng) :"
+                Width="100"
+              FontFamily="Times New Roman"
+ FontSize="15"
+  HorizontalAlignment="Left"
+ VerticalAlignment="Bottom"></TextBlock>
+                <TextBox  Margin="10 0 0 0" Width="100" x:Name="txt_GiaNhap"></TextBox>
+            </StackPanel>
+
+
+
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="45,332,0,0" Grid.RowSpan="2">
+            <Button x:Name="btnLuu"
+                   
+                               FontFamily="Times New Roman"
+                    BorderBrush="{x:Null}"
+             Foreground="Black" 
+                    Background="LightGray"
+           FontSize="15"
+              Width="100"
+              Height="30"
+              Content="Lưu "
+              IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+ 
+             ToolTip="MaterialDesignFlatLightButton" ></Button>
+            <Button x:Name="btnThoat" Content="Thoát" 
+                 Foreground="Black" 
+                    BorderBrush="{x:Null}"
+                    Background="LightGray"
+                    FontFamily="Times New Roman"
+           FontSize="15"  
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+
+  ToolTip="MaterialDesignFlatLightButton" 
+                    Width="100"
+          Height="30"
+         Margin="10 0 0 0" 
+         ></Button>
+        </StackPanel>
     </Grid>
 </Window>
